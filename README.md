@@ -14,9 +14,9 @@
 ### Module 2: Image Sharpening
 
 - **Functionality:** This module processes 9 pixels in parallel.
-- **Timing Report:** DataPathDelay = 23.859, LogicDelay = 6.904, RoutingDelay = 16.955
+- **Timing Report:** DataPathDelay = 10.803, LogicDelay = 7.590, RoutingDelay = 16.955
 - **Utilization Report:** DynamicPower = 24.798, StaticPower = 0.348, SignalPower = 6.626, LogicPower = 4.709
-- **Power Report:** TotalPower = 25.145, Muxes = 662, LUT_as_memory = 304, LUT_as_logic = 172, Slice_LUT = 18, LUT1 = 297, LUT2 = 0
+- **Power Report:** TotalPower = 21.978, Muxes = 662, LUT_as_memory = 304, LUT_as_logic = 172, Slice_LUT = 18, LUT1 = 297, LUT2 = 0
 
 ### Module 3: Image Addition
 
