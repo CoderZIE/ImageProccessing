@@ -48,8 +48,11 @@
 2. **Stage 2: Smoothening - Part 2**
    - Divide sum by total number of pixels (9 for 3x3 average filter).
 
-3. **Stage 3: Sharpening**
-   - Perform convolution.
+3. **Stage 3: Sharpening - Part 1**
+   - Perform convolution by multipling parallely.
+     
+3. **Stage 3: Sharpening - Part 1**
+   - Perform accumulation of pixels.
 
 4. **Stage 4: Addition**
    - Add sharpened image to input image.
