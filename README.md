@@ -51,16 +51,16 @@
 3. **Stage 3: Sharpening - Part 1**
    - Perform convolution by multipling parallely.
      
-3. **Stage 3: Sharpening - Part 1**
+3. **Stage 4: Sharpening - Part 1**
    - Perform accumulation of pixels.
 
-4. **Stage 4: Addition**
+4. **Stage 5: Addition**
    - Add sharpened image to input image.
 
-5. **Stage 5: Normalization - Part 1**
+5. **Stage 6: Normalization - Part 1**
    - Evaluate expression: 255×(Input_channel pixel value−min pixel value).
 
-6. **Stage 6: Normalization - Part 2**
+6. **Stage 7: Normalization - Part 2**
    - Divide product by (max pixel value−min pixel value).
 
 ### Implementation Details
