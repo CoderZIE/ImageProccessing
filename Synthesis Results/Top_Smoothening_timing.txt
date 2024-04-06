@@ -1,10 +1,11 @@
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+INFO: [Timing 38-72] No paths found.
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Apr  5 09:11:10 2024
+| Date         : Sat Apr  6 23:13:17 2024
 | Host         : Zaqi running 64-bit major release  (build 9200)
 | Command      : report_timing
 | Design       : Top_Smoothening
@@ -14,95 +15,6 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack:                    inf
-  Source:                 temp_reg[1][0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            temp_out_reg[1][9]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        19.575ns  (logic 7.698ns (39.325%)  route 11.877ns (60.675%))
-  Logic Levels:           28  (CARRY4=18 FDRE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=3 LUT5=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y141         FDRE                         0.000     0.000 r  temp_reg[1][0]/C
-    SLICE_X1Y141         FDRE (Prop_fdre_C_Q)         0.379     0.379 f  temp_reg[1][0]/Q
-                         net (fo=25, routed)          1.552     1.931    temp_reg[1][0]
-    SLICE_X5Y155         LUT1 (Prop_lut1_I0_O)        0.105     2.036 r  temp_out[1][11]_i_149/O
-                         net (fo=1, routed)           0.380     2.416    temp_out[1][11]_i_149_n_0
-    SLICE_X4Y154         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.480     2.896 r  temp_out_reg[1][11]_i_81/CO[3]
-                         net (fo=1, routed)           0.000     2.896    temp_out_reg[1][11]_i_81_n_0
-    SLICE_X4Y155         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.098     2.994 r  temp_out_reg[1][11]_i_46/CO[3]
-                         net (fo=1, routed)           0.000     2.994    temp_out_reg[1][11]_i_46_n_0
-    SLICE_X4Y156         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.180     3.174 r  temp_out_reg[1][11]_i_14/O[0]
-                         net (fo=17, routed)          1.639     4.813    p_2_in[9]
-    SLICE_X6Y148         LUT5 (Prop_lut5_I4_O)        0.249     5.062 r  temp_out[1][7]_i_48/O
-                         net (fo=1, routed)           0.000     5.062    temp_out[1][7]_i_48_n_0
-    SLICE_X6Y148         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.444     5.506 r  temp_out_reg[1][7]_i_34/CO[3]
-                         net (fo=1, routed)           0.000     5.506    temp_out_reg[1][7]_i_34_n_0
-    SLICE_X6Y149         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.100     5.606 r  temp_out_reg[1][7]_i_33/CO[3]
-                         net (fo=31, routed)          1.626     7.232    temp_out_reg[1][7]_i_33_n_0
-    SLICE_X8Y155         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.494     7.726 r  temp_out_reg[1][11]_i_168/CO[3]
-                         net (fo=1, routed)           0.000     7.726    temp_out_reg[1][11]_i_168_n_0
-    SLICE_X8Y156         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.207     7.933 f  temp_out_reg[1][11]_i_165/CO[0]
-                         net (fo=33, routed)          0.918     8.851    temp_out_reg[1][11]_i_165_n_3
-    SLICE_X7Y157         LUT3 (Prop_lut3_I2_O)        0.310     9.161 r  temp_out[1][11]_i_115/O
-                         net (fo=6, routed)           1.073    10.234    temp_out[1][11]_i_115_n_0
-    SLICE_X7Y157         LUT4 (Prop_lut4_I0_O)        0.268    10.502 r  temp_out[1][11]_i_119/O
-                         net (fo=1, routed)           0.000    10.502    temp_out[1][11]_i_119_n_0
-    SLICE_X7Y157         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.457    10.959 r  temp_out_reg[1][11]_i_62/CO[3]
-                         net (fo=1, routed)           0.000    10.959    temp_out_reg[1][11]_i_62_n_0
-    SLICE_X7Y158         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.098    11.057 r  temp_out_reg[1][11]_i_60/CO[3]
-                         net (fo=1, routed)           0.000    11.057    temp_out_reg[1][11]_i_60_n_0
-    SLICE_X7Y159         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.200    11.257 r  temp_out_reg[1][11]_i_186/O[2]
-                         net (fo=2, routed)           0.665    11.922    temp_out_reg[1][11]_i_186_n_5
-    SLICE_X6Y160         LUT3 (Prop_lut3_I1_O)        0.269    12.191 r  temp_out[1][11]_i_139/O
-                         net (fo=2, routed)           1.072    13.263    temp_out[1][11]_i_139_n_0
-    SLICE_X6Y161         LUT4 (Prop_lut4_I3_O)        0.286    13.549 r  temp_out[1][11]_i_143/O
-                         net (fo=1, routed)           0.000    13.549    temp_out[1][11]_i_143_n_0
-    SLICE_X6Y161         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.423    13.972 r  temp_out_reg[1][11]_i_71/CO[3]
-                         net (fo=1, routed)           0.000    13.972    temp_out_reg[1][11]_i_71_n_0
-    SLICE_X6Y162         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.262    14.234 r  temp_out_reg[1][11]_i_37/O[3]
-                         net (fo=3, routed)           0.800    15.034    temp_out_reg[1][11]_i_37_n_4
-    SLICE_X2Y163         LUT2 (Prop_lut2_I0_O)        0.250    15.284 r  temp_out[1][11]_i_66/O
-                         net (fo=1, routed)           0.000    15.284    temp_out[1][11]_i_66_n_0
-    SLICE_X2Y163         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.534    15.818 r  temp_out_reg[1][11]_i_32/O[3]
-                         net (fo=3, routed)           0.908    16.727    temp_out_reg[1][11]_i_32_n_4
-    SLICE_X3Y163         LUT4 (Prop_lut4_I0_O)        0.250    16.977 r  temp_out[1][11]_i_56/O
-                         net (fo=1, routed)           0.000    16.977    temp_out[1][11]_i_56_n_0
-    SLICE_X3Y163         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.332    17.309 r  temp_out_reg[1][11]_i_15/CO[3]
-                         net (fo=1, routed)           0.000    17.309    temp_out_reg[1][11]_i_15_n_0
-    SLICE_X3Y164         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.098    17.407 r  temp_out_reg[1][11]_i_9/CO[3]
-                         net (fo=12, routed)          1.244    18.650    temp_out_reg[1][11]_i_9_n_0
-    SLICE_X0Y161         LUT6 (Prop_lut6_I4_O)        0.105    18.755 r  temp_out[1][3]_i_5/O
-                         net (fo=1, routed)           0.000    18.755    temp_out[1][3]_i_5_n_0
-    SLICE_X0Y161         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.457    19.212 r  temp_out_reg[1][3]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    19.212    temp_out_reg[1][3]_i_1_n_0
-    SLICE_X0Y162         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.098    19.310 r  temp_out_reg[1][7]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    19.310    temp_out_reg[1][7]_i_1_n_0
-    SLICE_X0Y163         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.265    19.575 r  temp_out_reg[1][11]_i_1/O[1]
-                         net (fo=1, routed)           0.000    19.575    temp_out_reg[1][11]_i_1_n_6
-    SLICE_X0Y163         FDRE                                         r  temp_out_reg[1][9]/D
-  -------------------------------------------------------------------    -------------------
-
-
+No timing paths found.
 
 

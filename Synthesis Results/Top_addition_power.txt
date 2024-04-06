@@ -8,7 +8,7 @@ Finished Running Vector-less Activity Propagation
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Fri Apr  5 08:55:37 2024
+| Date             : Sat Apr  6 22:58:50 2024
 | Host             : Zaqi running 64-bit major release  (build 9200)
 | Command          : report_power
 | Design           : Top_addition
@@ -37,14 +37,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 7.036        |
+| Total On-Chip Power (W)  | 8.765        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 6.881        |
-| Device Static (W)        | 0.156        |
+| Dynamic (W)              | 8.600        |
+| Device Static (W)        | 0.165        |
 | Effective TJA (C/W)      | 1.9          |
-| Max Ambient (C)          | 71.8         |
-| Junction Temperature (C) | 38.2         |
+| Max Ambient (C)          | 68.6         |
+| Junction Temperature (C) | 41.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -59,16 +59,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.047 |       25 |       --- |             --- |
-|   LUT as Logic |     0.020 |        8 |    134600 |           <0.01 |
-|   CARRY4       |     0.013 |        3 |     33650 |           <0.01 |
-|   Register     |     0.008 |       11 |    269200 |           <0.01 |
+| Slice Logic    |     0.053 |       34 |       --- |             --- |
+|   LUT as Logic |     0.022 |        8 |    134600 |           <0.01 |
+|   CARRY4       |     0.016 |        5 |     33650 |            0.01 |
+|   Register     |     0.010 |       18 |    269200 |           <0.01 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.177 |       34 |       --- |             --- |
-| I/O            |     6.656 |       31 |       400 |            7.75 |
-| Static Power   |     0.156 |          |           |                 |
-| Total          |     7.036 |          |           |                 |
+| Signals        |     0.245 |       49 |       --- |             --- |
+| I/O            |     8.302 |       47 |       400 |           11.75 |
+| Static Power   |     0.165 |          |           |                 |
+| Total          |     8.765 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,11 +78,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.355 |       0.304 |      0.051 |
-| Vccaux    |       1.800 |     0.571 |       0.538 |      0.033 |
+| Vccint    |       1.000 |     0.460 |       0.402 |      0.058 |
+| Vccaux    |       1.800 |     0.705 |       0.671 |      0.034 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     3.120 |       3.115 |      0.005 |
+| Vcco18    |       1.800 |     3.888 |       3.883 |      0.005 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -145,10 +145,10 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| Top_addition |     6.881 |
+| Top_addition |     8.600 |
 +--------------+-----------+
 
 
 7 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1515.191 ; gain = 605.641
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1518.008 ; gain = 606.992

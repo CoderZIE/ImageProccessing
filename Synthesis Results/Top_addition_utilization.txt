@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Apr  5 08:55:37 2024
+| Date         : Sat Apr  6 22:58:50 2024
 | Host         : Zaqi running 64-bit major release  (build 9200)
 | Command      : report_utilization
 | Design       : Top_addition
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs              |    8 |     0 |    134600 | <0.01 |
 |   LUT as Logic          |    8 |     0 |    134600 | <0.01 |
 |   LUT as Memory         |    0 |     0 |     46200 |  0.00 |
-| Slice Registers         |   11 |     0 |    269200 | <0.01 |
-|   Register as Flip Flop |   11 |     0 |    269200 | <0.01 |
+| Slice Registers         |   18 |     0 |    269200 | <0.01 |
+|   Register as Flip Flop |   18 |     0 |    269200 | <0.01 |
 |   Register as Latch     |    0 |     0 |    269200 |  0.00 |
 | F7 Muxes                |    0 |     0 |     67300 |  0.00 |
 | F8 Muxes                |    0 |     0 |     33650 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 11    |          Yes |       Reset |            - |
+| 18    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,8 +67,8 @@ Table of Contents
 +------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                | Used | Fixed | Available | Util% |
 +------------------------------------------+------+-------+-----------+-------+
-| Slice                                    |    3 |     0 |     33650 | <0.01 |
-|   SLICEL                                 |    3 |     0 |           |       |
+| Slice                                    |    5 |     0 |     33650 |  0.01 |
+|   SLICEL                                 |    5 |     0 |           |       |
 |   SLICEM                                 |    0 |     0 |           |       |
 | LUT as Logic                             |    8 |     0 |    134600 | <0.01 |
 |   using O5 output only                   |    0 |       |           |       |
@@ -77,8 +77,8 @@ Table of Contents
 | LUT as Memory                            |    0 |     0 |     46200 |  0.00 |
 |   LUT as Distributed RAM                 |    0 |     0 |           |       |
 |   LUT as Shift Register                  |    0 |     0 |           |       |
-| Slice Registers                          |   11 |     0 |    269200 | <0.01 |
-|   Register driven from within the Slice  |   11 |       |           |       |
+| Slice Registers                          |   18 |     0 |    269200 | <0.01 |
+|   Register driven from within the Slice  |   18 |       |           |       |
 |   Register driven from outside the Slice |    0 |       |           |       |
 | Unique Control Sets                      |    1 |       |     33650 | <0.01 |
 +------------------------------------------+------+-------+-----------+-------+
@@ -114,9 +114,9 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   31 |     0 |       400 |  7.75 |
-|   IOB Master Pads           |   15 |       |           |       |
-|   IOB Slave Pads            |   15 |       |           |       |
+| Bonded IOB                  |   47 |     0 |       400 | 11.75 |
+|   IOB Master Pads           |   23 |       |           |       |
+|   IOB Slave Pads            |   23 |       |           |       |
 | Bonded IPADs                |    0 |     0 |        26 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        16 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        10 |  0.00 |
@@ -175,11 +175,11 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   20 |                  IO |
-| OBUF     |   11 |                  IO |
-| FDRE     |   11 |        Flop & Latch |
+| IBUF     |   26 |                  IO |
+| OBUF     |   21 |                  IO |
+| FDRE     |   18 |        Flop & Latch |
 | LUT2     |    8 |                 LUT |
-| CARRY4   |    3 |          CarryLogic |
+| CARRY4   |    5 |          CarryLogic |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

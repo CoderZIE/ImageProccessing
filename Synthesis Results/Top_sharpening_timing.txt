@@ -4,7 +4,7 @@ INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max 
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Apr  5 09:07:59 2024
+| Date         : Sat Apr  6 23:10:38 2024
 | Host         : Zaqi running 64-bit major release  (build 9200)
 | Command      : report_timing
 | Design       : Top_sharpening
@@ -15,81 +15,85 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 Timing Report
 
 Slack:                    inf
-  Source:                 img[2][2][2]
+  Source:                 img[2][2][0]
                             (input port)
-  Destination:            out_reg[12]/D
+  Destination:            out_reg[16]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        23.859ns  (logic 6.904ns (28.937%)  route 16.955ns (71.063%))
-  Logic Levels:           25  (CARRY4=12 IBUF=1 LUT2=9 LUT4=1 LUT6=2)
+  Data Path Delay:        20.607ns  (logic 7.675ns (37.244%)  route 12.932ns (62.756%))
+  Logic Levels:           26  (CARRY4=14 IBUF=1 LUT2=9 LUT4=1 LUT5=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    K20                                               0.000     0.000 f  img[2][2][2] (IN)
-                         net (fo=0)                   0.000     0.000    img[2][2][2]
-    K20                  IBUF (Prop_ibuf_I_O)         0.878     0.878 f  out_reg[3]_i_250/O
-                         net (fo=16, routed)          5.433     6.311    out_reg[3]_i_250_n_0
-    SLICE_X110Y135       LUT2 (Prop_lut2_I1_O)        0.115     6.426 r  out[7]_i_206/O
-                         net (fo=1, routed)           0.790     7.216    out[7]_i_206_n_0
-    SLICE_X112Y134       LUT6 (Prop_lut6_I3_O)        0.267     7.483 r  out[7]_i_195/O
-                         net (fo=1, routed)           0.000     7.483    out[7]_i_195_n_0
-    SLICE_X112Y134       CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.444     7.927 r  out_reg[7]_i_183/CO[3]
-                         net (fo=1, routed)           0.000     7.927    out_reg[7]_i_183_n_0
-    SLICE_X112Y135       CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.178     8.105 r  out_reg[11]_i_472/O[0]
-                         net (fo=2, routed)           0.544     8.649    out_reg[11]_i_472_n_7
-    SLICE_X113Y135       LUT4 (Prop_lut4_I3_O)        0.251     8.901 r  out[11]_i_457/O
-                         net (fo=4, routed)           0.944     9.845    out[11]_i_457_n_0
-    SLICE_X114Y134       LUT6 (Prop_lut6_I0_O)        0.268    10.113 r  out[11]_i_433/O
-                         net (fo=1, routed)           0.000    10.113    out[11]_i_433_n_0
-    SLICE_X114Y134       CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.187    10.300 r  out_reg[11]_i_405/O[1]
-                         net (fo=2, routed)           0.664    10.964    out_reg[11]_i_405_n_6
-    SLICE_X115Y135       LUT2 (Prop_lut2_I0_O)        0.250    11.214 r  out[11]_i_409/O
-                         net (fo=1, routed)           0.000    11.214    out[11]_i_409_n_0
-    SLICE_X115Y135       CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.207    11.421 r  out_reg[11]_i_375/O[0]
-                         net (fo=1, routed)           1.526    12.946    out_reg[11]_i_375_n_7
-    SLICE_X87Y135        LUT2 (Prop_lut2_I1_O)        0.249    13.195 r  out[11]_i_349/O
-                         net (fo=1, routed)           0.000    13.195    out[11]_i_349_n_0
-    SLICE_X87Y135        CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.207    13.402 r  out_reg[11]_i_315/O[0]
-                         net (fo=1, routed)           1.679    15.081    out_reg[11]_i_315_n_7
-    SLICE_X57Y135        LUT2 (Prop_lut2_I1_O)        0.249    15.330 r  out[11]_i_289/O
-                         net (fo=1, routed)           0.000    15.330    out[11]_i_289_n_0
-    SLICE_X57Y135        CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.343    15.673 r  out_reg[11]_i_255/O[1]
-                         net (fo=1, routed)           2.112    17.785    out_reg[11]_i_255_n_6
-    SLICE_X6Y135         LUT2 (Prop_lut2_I1_O)        0.250    18.035 r  out[11]_i_228/O
-                         net (fo=1, routed)           0.000    18.035    out[11]_i_228_n_0
-    SLICE_X6Y135         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.191    18.226 r  out_reg[11]_i_195/O[1]
-                         net (fo=1, routed)           0.773    19.000    out_reg[11]_i_195_n_6
-    SLICE_X4Y135         LUT2 (Prop_lut2_I1_O)        0.245    19.245 r  out[11]_i_168/O
-                         net (fo=1, routed)           0.000    19.245    out[11]_i_168_n_0
-    SLICE_X4Y135         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.187    19.432 r  out_reg[11]_i_135/O[1]
-                         net (fo=1, routed)           0.584    20.015    out_reg[11]_i_135_n_6
-    SLICE_X1Y135         LUT2 (Prop_lut2_I1_O)        0.250    20.265 r  out[11]_i_108/O
-                         net (fo=1, routed)           0.000    20.265    out[11]_i_108_n_0
-    SLICE_X1Y135         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.481    20.746 r  out_reg[11]_i_75/O[2]
-                         net (fo=1, routed)           0.657    21.403    out_reg[11]_i_75_n_5
-    SLICE_X3Y135         LUT2 (Prop_lut2_I1_O)        0.253    21.656 r  out[11]_i_47/O
-                         net (fo=1, routed)           0.000    21.656    out[11]_i_47_n_0
-    SLICE_X3Y135         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.207    21.863 r  out_reg[11]_i_19/O[2]
-                         net (fo=1, routed)           1.249    23.112    out_reg[11]_i_19_n_5
-    SLICE_X2Y146         LUT2 (Prop_lut2_I1_O)        0.253    23.365 r  out[11]_i_5/O
-                         net (fo=1, routed)           0.000    23.365    out[11]_i_5_n_0
-    SLICE_X2Y146         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.316    23.681 r  out_reg[11]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    23.681    out_reg[11]_i_1_n_0
-    SLICE_X2Y147         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.178    23.859 r  out_reg[12]_i_1/O[0]
-                         net (fo=1, routed)           0.000    23.859    out0[12]
-    SLICE_X2Y147         FDRE                                         r  out_reg[12]/D
+    R5                                                0.000     0.000 r  img[2][2][0] (IN)
+                         net (fo=0)                   0.000     0.000    img[2][2][0]
+    R5                   IBUF (Prop_ibuf_I_O)         0.885     0.885 r  out_reg[11]_i_284/O
+                         net (fo=15, routed)          5.107     5.992    out_reg[11]_i_284_n_0
+    SLICE_X6Y140         LUT4 (Prop_lut4_I3_O)        0.105     6.097 r  out[11]_i_307/O
+                         net (fo=1, routed)           0.000     6.097    out[11]_i_307_n_0
+    SLICE_X6Y140         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.480     6.577 r  out_reg[11]_i_285/O[2]
+                         net (fo=2, routed)           1.026     7.603    out_reg[11]_i_285_n_5
+    SLICE_X4Y138         LUT2 (Prop_lut2_I0_O)        0.253     7.856 r  out[7]_i_98/O
+                         net (fo=2, routed)           0.609     8.465    out[7]_i_98_n_0
+    SLICE_X3Y140         LUT5 (Prop_lut5_I4_O)        0.274     8.739 r  out[7]_i_101/O
+                         net (fo=1, routed)           0.000     8.739    out[7]_i_101_n_0
+    SLICE_X3Y140         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332     9.071 r  out_reg[7]_i_93/CO[3]
+                         net (fo=1, routed)           0.000     9.071    out_reg[7]_i_93_n_0
+    SLICE_X3Y141         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180     9.251 r  out_reg[11]_i_248/O[0]
+                         net (fo=2, routed)           0.536     9.787    out1[7]
+    SLICE_X4Y141         LUT2 (Prop_lut2_I0_O)        0.249    10.036 r  out[7]_i_94/O
+                         net (fo=1, routed)           0.000    10.036    out[7]_i_94_n_0
+    SLICE_X4Y141         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.206    10.242 r  out_reg[7]_i_92/O[3]
+                         net (fo=1, routed)           0.699    10.941    out_reg[7]_i_92_n_4
+    SLICE_X5Y141         LUT2 (Prop_lut2_I1_O)        0.257    11.198 r  out[7]_i_81/O
+                         net (fo=1, routed)           0.000    11.198    out[7]_i_81_n_0
+    SLICE_X5Y141         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    11.530 r  out_reg[7]_i_79/CO[3]
+                         net (fo=1, routed)           0.000    11.530    out_reg[7]_i_79_n_0
+    SLICE_X5Y142         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    11.795 r  out_reg[11]_i_200/O[1]
+                         net (fo=1, routed)           0.977    12.772    out_reg[11]_i_200_n_6
+    SLICE_X8Y140         LUT2 (Prop_lut2_I1_O)        0.250    13.022 r  out[11]_i_175/O
+                         net (fo=1, routed)           0.000    13.022    out[11]_i_175_n_0
+    SLICE_X8Y140         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.480    13.502 r  out_reg[11]_i_162/O[2]
+                         net (fo=1, routed)           0.830    14.332    out_reg[11]_i_162_n_5
+    SLICE_X9Y133         LUT2 (Prop_lut2_I1_O)        0.244    14.576 r  out[11]_i_136/O
+                         net (fo=1, routed)           0.000    14.576    out[11]_i_136_n_0
+    SLICE_X9Y133         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.332    14.908 r  out_reg[11]_i_124/CO[3]
+                         net (fo=1, routed)           0.000    14.908    out_reg[11]_i_124_n_0
+    SLICE_X9Y134         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    15.088 r  out_reg[15]_i_228/O[0]
+                         net (fo=1, routed)           0.727    15.815    out_reg[15]_i_228_n_7
+    SLICE_X6Y134         LUT2 (Prop_lut2_I1_O)        0.249    16.064 r  out[15]_i_179/O
+                         net (fo=1, routed)           0.000    16.064    out[15]_i_179_n_0
+    SLICE_X6Y134         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.210    16.274 r  out_reg[15]_i_154/O[0]
+                         net (fo=1, routed)           0.671    16.945    out_reg[15]_i_154_n_7
+    SLICE_X5Y133         LUT2 (Prop_lut2_I1_O)        0.238    17.183 r  out[15]_i_105/O
+                         net (fo=1, routed)           0.000    17.183    out[15]_i_105_n_0
+    SLICE_X5Y133         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.453    17.636 r  out_reg[15]_i_80/O[2]
+                         net (fo=1, routed)           0.657    18.293    out_reg[15]_i_80_n_5
+    SLICE_X7Y133         LUT2 (Prop_lut2_I1_O)        0.253    18.546 r  out[15]_i_29/O
+                         net (fo=1, routed)           0.000    18.546    out[15]_i_29_n_0
+    SLICE_X7Y133         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.332    18.878 r  out_reg[15]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    18.878    out_reg[15]_i_18_n_0
+    SLICE_X7Y134         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    19.058 r  out_reg[16]_i_3/O[0]
+                         net (fo=1, routed)           1.093    20.151    C[16]
+    SLICE_X11Y144        LUT2 (Prop_lut2_I1_O)        0.249    20.400 r  out[16]_i_2/O
+                         net (fo=1, routed)           0.000    20.400    out[16]_i_2_n_0
+    SLICE_X11Y144        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.207    20.607 r  out_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000    20.607    out0[16]
+    SLICE_X11Y144        FDRE                                         r  out_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
 
