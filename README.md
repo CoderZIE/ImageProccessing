@@ -2,35 +2,87 @@
 
 ### Block Diagram
 
-![Image Enhancement Algorithm](block_diagram.png)
+![Image Enhancement Algorithm](Images/block_diagram.png)
 
 ### Module 1: Image Smoothening
 
 - **Functionality:** This module processes 18 pixels in parallel.
-- **Timing Report:** DataPathDelay = 19.575, LogicDelay = 7.698, RoutingDelay = 11.877
-- **Utilization Report:** DynamicPower = 47.566, StaticPower = 1.31, SignalPower = 11.152, LogicPower = 11.878
-- **Power Report:** TotalPower = 48.876, Muxes = 26, LUT_as_memory = 124, LUT_as_logic = 390, Slice_LUT = 338, LUT1 = 76, LUT2 = 50, LUT3 = 0
+- **Timing Report:** 
+  - DataPathDelay = 19.575 
+  - LogicDelay = 7.698
+  - RoutingDelay = 11.877
+- **Utilization Report:** 
+  - DynamicPower = 47.566
+  - StaticPower = 1.31
+  - SignalPower = 11.152
+  - LogicPower = 11.878
+- **Power Report:** 
+  - TotalPower = 48.876
+  - Muxes = 26
+  - LUT_as_memory = 124
+  - LUT_as_logic = 390
+  - Slice_LUT = 338
+  - LUT1 = 76
+  - LUT2 = 50
+  - LUT3 = 0
 
 ### Module 2: Image Sharpening
 
 - **Functionality:** This module processes 9 pixels in parallel.
-- **Timing Report:** DataPathDelay = 10.803, LogicDelay = 7.590, RoutingDelay = 16.955
-- **Utilization Report:** DynamicPower = 24.798, StaticPower = 0.348, SignalPower = 6.626, LogicPower = 4.709
-- **Power Report:** TotalPower = 21.978, Muxes = 662, LUT_as_memory = 304, LUT_as_logic = 172, Slice_LUT = 18, LUT1 = 297, LUT2 = 0
+- **Timing Report:** 
+  - DataPathDelay = 10.803
+  - LogicDelay = 7.590
+  - RoutingDelay = 16.955
+- **Utilization Report:** 
+  - DynamicPower = 24.798
+  - StaticPower = 0.348
+  - SignalPower = 6.626
+  - LogicPower = 4.709
+- **Power Report:** 
+  - TotalPower = 21.978
+  - Muxes = 662
+  - LUT_as_memory = 304
+  - LUT_as_logic = 172
+  - Slice_LUT = 18
+  - LUT1 = 297
+  - LUT2 = 0
 
 ### Module 3: Image Addition
 
-- **Functionality:** This module processes 1 pixels in parallel.
-- **Timing Report:** DataPathDelay = 4.504, LogicDelay = 2.763, RoutingDelay = 1.741
-- **Utilization Report:** DynamicPower = 6.881, StaticPower = 0.156, SignalPower = 0.177, LogicPower = 0.02
-- **Power Report:** TotalPower = 7.036, Muxes = 8, LUT_as_memory = 8, LUT_as_logic = 0
+- **Functionality:** This module processes 1 pixel in parallel.
+- **Timing Report:** 
+  - Slack: inf
+  - DataPathDelay = 4.504ns 
+  - LogicLevels: 2 
+- **Utilization Report:** 
+  - Slice LUTs: 8
+  - Registers: 11
+- **Power Report:** 
+  - TotalPower = 0.047
 
 ### Module 4: Normalization
 
-- **Functionality:** This module processes 1 pixels in parallel.
-- **Timing Report:** DataPathDelay = 12.313, LogicDelay = 5.17, RoutingDelay = 7.143
-- **Utilization Report:** DynamicPower = 11.788, StaticPower = 0.185, SignalPower = 0.663, LogicPower = 0.564
-- **Power Report:** TotalPower = 11.973, Muxes = 104, LUT_as_memory = 7, LUT_as_logic = 43, Slice_LUT = 27, LUT1 = 10, LUT2 = 14, LUT3 = 16
+- **Functionality:** This module processes 1 pixel in parallel.
+- **Timing Report:** 
+  - DataPathDelay = 12.313
+  - LogicDelay = 5.17
+  - RoutingDelay = 7.143
+- **Utilization Report:** 
+  - DynamicPower = 11.788
+  - StaticPower = 0.185
+  - SignalPower = 0.663
+  - LogicPower = 0.564
+- **Power Report:** 
+  - TotalPower = 11.973
+  - Muxes = 104
+  - LUT_as_memory = 7
+  - LUT_as_logic = 43
+  - Slice_LUT = 27
+  - LUT1 = 10
+  - LUT2 = 14
+  - LUT3 = 16
+
+**Note:** Detailed Synthesis Report are attached in the synthesis folder.
 
 ### Design Pipeline
 
