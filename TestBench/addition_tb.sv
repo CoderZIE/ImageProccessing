@@ -22,9 +22,9 @@
 
 module addition_tb();
     logic clk;
-    logic [7:0] img;
-    logic signed [19:0] sharpened_img;
-    logic signed [19:0] out;
+    logic [7:0] img[0:2][0:2];
+    logic signed [11:0] sharpened_img[0:2][0:2];
+    logic signed [11:0] out[0:2][0:2];
     
     addition add(img,clk,sharpened_img,out);
     
@@ -36,8 +36,8 @@ module addition_tb();
     end
     
     initial begin
-    img=20'd5;
-    sharpened_img=20'd8;
+    sharpened_img = '{'{0,255,0}, {-1,5,-1}, {0,-1,0}};
+    img = '{'{0,25,1}, {2,55,1}, {1,7,1}};
     #10;
     end
 endmodule

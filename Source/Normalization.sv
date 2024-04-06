@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-parameter norm_width = 10;
+parameter norm_width = 20;
 
 module Normalization(A, out, clk ,reset);
     

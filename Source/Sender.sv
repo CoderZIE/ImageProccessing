@@ -41,7 +41,7 @@ module Sender (
   reg [ 7:0] data;
 
 
-  parameter W5Frequency = 6_250_000;
+  parameter W5Frequency = 100_000_000;
   parameter baudRate = 230400;
   parameter samplingInterval = W5Frequency / baudRate;
   parameter halfSamplingInterval = samplingInterval / 2;

@@ -26,6 +26,9 @@
   - LUT2 = 50
   - LUT3 = 0
 
+- **Simulation Results** 
+![Image Enhancement Algorithm](Images/smoothening.jpg)
+
 ### Module 2: Image Sharpening
 
 - **Functionality:** This module processes 9 pixels in parallel.
@@ -46,6 +49,8 @@
   - Slice_LUT = 18
   - LUT1 = 297
   - LUT2 = 0
+- **Simulation Results** 
+![Image Enhancement Algorithm](Images/sharpening.jpg)
 
 ### Module 3: Image Addition
 
@@ -59,6 +64,8 @@
   - Registers: 11
 - **Power Report:** 
   - TotalPower = 0.047
+- **Simulation Results** 
+![Image Enhancement Algorithm](Images/addition.jpg)
 
 ### Module 4: Normalization
 
@@ -81,6 +88,8 @@
   - LUT1 = 10
   - LUT2 = 14
   - LUT3 = 16
+- **Simulation Results** 
+![Image Enhancement Algorithm](Images/normalization.png)
 
 **Note:** Detailed Synthesis Report are attached in the synthesis folder.
 

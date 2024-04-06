@@ -20,8 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module BRAM_Controler(address_read,reset,image_in, clk,new_data,image_out);
+module BRAM_Controler(Recieve,address_read,reset,image_in, clk,new_data,image_out);
 
+input Recieve;
 input [12:0]address_read;
 input reset;
 input [7:0]image_in;
@@ -35,6 +36,7 @@ logic [7:0]data_out;
 logic enable;
 logic [1:0]count; //3 bit counter 0-7
 logic [7:0]temp_data_in;
+logic prevdata;
 
 design_1_wrapper
    Inst3(address_write,
@@ -43,7 +45,7 @@ design_1_wrapper
     enable,
     address_read,
     clk,
-    image_out,1);
+    image_out);
     
 always_ff@(posedge clk)begin
     if(reset)begin
@@ -52,27 +54,32 @@ always_ff@(posedge clk)begin
         data_out=0;
         enable = 0;
         count=0;
+        prevdata=new_data;
     end
     
     else begin
-        if(new_data)begin //if new data arrives then it will be loaded in temp_data_in
-            data_in = image_in;
-            count = 1;
-            enable = 1;
-        end    
-        else if(count == 1)begin
-            count = count + 1;
+        if(Recieve)begin
+            if(prevdata!=new_data)begin //if new data arrives then it will be loaded in temp_data_in
+                data_in = image_in;
+                count = 1;
+                enable = 1;
+                prevdata=new_data;
+            end    
+            else if(count == 1)begin
+                count = count + 1;
+            end
+            else if(count == 2)begin
+                count = count + 1;
+            end
+            else if(count == 3)begin
+                address_write = address_write + 1;
+                enable = 0;
+                count = count + 1;
+            end
         end
-        else if(count == 2)begin
-            count = count + 1;
+        else begin
+        //do nothing
         end
-        else if(count == 3)begin
-            address_write = address_write + 1;
-            enable = 0;
-            count = count + 1;
-        end
-       
-     
     end
     
 end

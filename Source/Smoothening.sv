@@ -25,26 +25,28 @@ parameter width = 11; //need to be decided
 
 module Smoothening(image,out, clk, reset);
 
-input signed [7:0] image [8:0][1:0];
+input [7:0] image [8:0][1:0];
 input clk;
 input reset;
-output logic signed [width:0]out [1:0];
+output logic [width:0]out [1:0];
 
-logic signed [width:0]temp [1:0];
-logic signed [width:0]temp_out [1:0];
+logic [width:0]temp [1:0];
+logic [width:0]temp_out [1:0];
 
 integer i,j;
 
 
 always_ff @(posedge clk)begin
     if(reset)begin
-        for( i =0; i<4; i=i+1)begin
+        for( i =0; i<2; i=i+1)begin
             temp[i]=0;
+            temp_out[i]=0;
+            
         end
     end
     
     else begin
-        for(i = 0; i<4; i=i+1)begin
+        for(i = 0; i<2; i=i+1)begin
             temp[i]=0;
             for(j=0; j<9; j=j+1)begin
                 temp[i] = temp[i]+ image[j][i];
@@ -62,8 +64,6 @@ end
 
 assign    out[0] = temp_out[0];
 assign    out[1] = temp_out[1];
-
-
 
 
 

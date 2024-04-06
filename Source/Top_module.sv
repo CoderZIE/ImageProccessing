@@ -20,11 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Top_module(RxD, TxD, clk, reset);
+module Top_module(Recieve, RxD, TxD, clk, reset, Transmitt,disp1, disp2);
 
 input RxD;
+input Recieve; //button to start recieving 
+input Transmitt; //button to start transmitting
 input clk;
 input reset;
+output logic [7:0]disp1;
+output logic [7:0]disp2;
 output logic TxD;
 
 
@@ -34,6 +38,8 @@ logic isNewData;
 logic doTransmit;
 logic isBusy;
 logic [7:0]TxData;
+logic [12:0]address;
+logic prevData;
 
 //Calling UART Reciver for recieving
 Receiver Inst1(
@@ -55,6 +61,42 @@ Sender Inst2(
     isBusy //currently port is busy
 );
 
+//Block Ram
+BRAM_Controler Inst5(Recieve,address_read,reset,RxData, clk,isNewData,TxData);
+
+always_ff@(posedge clk)begin
+    if(reset)begin
+        address=0;
+        doTransmit=0;
+    end
+    else begin
+        if(Transmitt)begin
+            if(isBusy)begin
+                //do nothing
+                doTransmit=0;
+            end 
+            else begin
+                doTransmit=1;
+                address=address+1;
+            end
+        end
+        else begin
+            doTransmit=0;
+        end
+    end
+end
+
+always_ff@(posedge clk)begin
+    if(Recieve)begin
+        if(prevData!=isNewData)begin
+            disp1 = RxData;
+            prevData=isNewData;
+        end
+    end
+    if(Transmitt)begin
+        disp2 = TxData;
+    end
+end
 
 
 

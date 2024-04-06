@@ -30,7 +30,7 @@ module Receiver (
     isNewData  //changes value 
 );
 
-  parameter W5Frequency = 6_250_000;
+  parameter W5Frequency = 100_000_000;
   parameter baudRate = 230400;
   parameter samplingInterval = W5Frequency / baudRate;
   parameter halfSamplingInterval = samplingInterval / 2;
@@ -159,7 +159,7 @@ module Receiver (
             state = 10;
             data[7] = RxD;
             RxData = data;
-            isNewData = isNewData + 1;
+            isNewData = isNewData +1;
           end else begin
             //do nothing
           end

@@ -45,9 +45,9 @@ module normalization_tb();
         #10
         
         reset = 0 ;
-        A= 192;
+        A= -192;
         
-        #10;
+        #100;
         
         $finish; 
         
