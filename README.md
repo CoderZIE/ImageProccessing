@@ -89,7 +89,7 @@
   - LUT2 = 14
   - LUT3 = 16
 - **Simulation Results** 
-![Image Enhancement Algorithm](Images/normalization.png)
+![Image Enhancement Algorithm](Images/Normalization.png)
 
 **Note:** Detailed Synthesis Report are attached in the synthesis folder.
 
