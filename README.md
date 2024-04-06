@@ -112,7 +112,7 @@
 3. **Stage 3: Sharpening - Part 1**
    - Perform convolution by multipling parallely.
      
-3. **Stage 4: Sharpening - Part 1**
+3. **Stage 4: Sharpening - Part 2**
    - Perform accumulation of pixels.
 
 4. **Stage 5: Addition**
