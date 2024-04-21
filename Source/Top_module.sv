@@ -20,15 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Top_module(Recieve, RxD, TxD, clk, reset, Transmitt,disp1, disp2);
+module Top_module(Recieve, RxD, TxD, clk, reset, Transmitt, done, done_out);
 
 input RxD;
 input Recieve; //button to start recieving 
 input Transmitt; //button to start transmitting
 input clk;
 input reset;
-output logic [7:0]disp1;
-output logic [7:0]disp2;
+input done; //to indicate that we have recieved the required data
+output done_out; //to indicate that we have successfully processed the data
 output logic TxD;
 
 
@@ -63,7 +63,15 @@ Sender Inst2(
 
 //Block Ram
 BRAM_Controler Inst5(Recieve,address_read,reset,RxData, clk,isNewData,TxData);
+//Normalization nr1();
+//Smoothening sm1();
+//addition ad1();
+//sharpening ar1();
 
+
+
+
+//logic for transmission
 always_ff@(posedge clk)begin
     if(reset)begin
         address=0;
@@ -86,15 +94,12 @@ always_ff@(posedge clk)begin
     end
 end
 
+//logic for Reciving the data
 always_ff@(posedge clk)begin
     if(Recieve)begin
         if(prevData!=isNewData)begin
-            disp1 = RxData;
             prevData=isNewData;
         end
-    end
-    if(Transmitt)begin
-        disp2 = TxData;
     end
 end
 

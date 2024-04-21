@@ -62,7 +62,7 @@ always_ff@(posedge clk)begin
             if(prevdata!=new_data)begin //if new data arrives then it will be loaded in temp_data_in
                 data_in = image_in;
                 count = 1;
-                enable = 1;
+                enable = 1; //to enable the block RAM
                 prevdata=new_data;
             end    
             else if(count == 1)begin

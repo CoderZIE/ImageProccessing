@@ -21,20 +21,20 @@
 
 
 module addition(
-    input [7:0] img [0:2][0:2],
+    input reset,
+    input [8:0] img,
+    input stall,
     input clk,
-    input signed [11:0] sharpened_image [0:2][0:2],
-    output logic signed [11:0] out [0:2][0:2]);
+    input signed [20:0] sharpened_image,
+    output logic signed [20:0] out);
     
     always_ff@(posedge clk)begin
-    out[0][0]=sharpened_image[0][0]+img[0][0];
-    out[0][1]=sharpened_image[0][1]+img[0][1];
-    out[0][2]=sharpened_image[0][2]+img[0][2];
-    out[1][0]=sharpened_image[1][0]+img[1][0];
-    out[1][1]=sharpened_image[1][1]+img[1][1];
-    out[1][2]=sharpened_image[1][2]+img[1][2];
-    out[2][0]=sharpened_image[2][0]+img[2][0];
-    out[2][1]=sharpened_image[2][1]+img[2][1];
-    out[2][2]=sharpened_image[2][2]+img[2][2];
+    if (reset) out=0;
+    else begin
+    if(stall) out=out;
+    else begin
+    out=sharpened_image+img;
+    end
+    end
     end
 endmodule

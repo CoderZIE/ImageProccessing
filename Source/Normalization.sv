@@ -19,27 +19,37 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-parameter norm_width = 20;
+parameter norm_width = 21;
 
-module Normalization(A, out, clk ,reset);
+module Normalization(A, out, clk ,reset,stall);
     
     input clk;
     input reset;
-    input logic [norm_width:0]A;
-    output logic [norm_width:0]out;
+    input stall;
+    input logic signed  [norm_width:0]A;
+    output logic signed [norm_width+8:0]out; //30 bit as 255(8 bit)  and A(22 bit)
+    integer signed max=1530;
+    integer signed min=-510;
     
-    integer max = 255*6;
-    integer min = -255*2;
-    
-    logic signed [norm_width:0]temp;
-    logic signed [norm_width:0]temp_out;
+    logic signed [norm_width+8:0]temp;
+    logic signed [norm_width+8:0]temp_out;
     
     always_ff@(posedge clk)begin
-        temp = 255*(A - min); 
+        if(reset) temp=0;
+        else begin
+        if(stall) temp=temp;
+        else begin
+            temp = 255*(A - min); 
+            end  
+        end 
     end
     
     always_ff@(posedge clk)begin
-        temp_out = temp /(max-min);
+        if(reset) temp_out=0;
+        else begin
+        if(stall) temp_out=temp_out;
+        else temp_out = temp /(max-min);
+        end
     end
     
     
