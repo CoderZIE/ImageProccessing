@@ -25,7 +25,7 @@ module normalization_tb();
     logic clk;
     logic reset;
     logic [norm_width:0]A;
-    logic [norm_width:0]out;
+    logic [7:0]out;
     
     Normalization norm(A, out, clk ,reset);
     
